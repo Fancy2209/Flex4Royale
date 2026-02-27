@@ -413,7 +413,7 @@ public class UIDUtil
             case "f":
                 return 15;
             default:
-                return new uint(hex);
+                return uint(hex);
         }    
     }
 }

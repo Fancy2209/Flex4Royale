@@ -124,7 +124,7 @@ public class ObjectUtil
      */ 
     public static function copy(value:Object):Object
     {
-        var buffer:ByteArray = new ByteArray();
+        var buffer:flash.utils.ByteArray = new flash.utils.ByteArray();
         buffer.writeObject(value);
         buffer.position = 0;
         var result:Object = buffer.readObject();
@@ -820,9 +820,9 @@ public class ObjectUtil
                     {
                         result = listCompare(a as IList, b as IList, currentDepth, desiredDepth, refs);
                     }
-                    else if ((a is ByteArray) && (b is ByteArray))
+                    else if ((a is flash.utils.ByteArray) && (b is flash.utils.ByteArray))
                     {
-                        result = byteArrayCompare(a as ByteArray, b as ByteArray);
+                        result = byteArrayCompare(a as flash.utils.ByteArray, b as flash.utils.ByteArray);
                     }
                     else if (getQualifiedClassName(a) == getQualifiedClassName(b))
                     {
@@ -1503,7 +1503,7 @@ public class ObjectUtil
     /**
      * @private
      */
-    private static function byteArrayCompare(a:ByteArray, b:ByteArray):int
+    private static function byteArrayCompare(a:flash.utils.ByteArray, b:flash.utils.ByteArray):int
     {
         var result:int = 0;
         

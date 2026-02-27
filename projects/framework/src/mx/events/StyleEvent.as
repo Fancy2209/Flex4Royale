@@ -34,7 +34,7 @@ import flash.events.ProgressEvent;
  *  @playerversion AIR 1.1
  *  @productversion Flex 3
  */
-public class StyleEvent extends ProgressEvent
+public class StyleEvent extends flash.events.ProgressEvent
 {
     include "../core/Version.as";
 

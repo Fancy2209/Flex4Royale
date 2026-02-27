@@ -41,6 +41,6 @@ package mx.filters
         *  @playerversion AIR 1.5
         *  @productversion Flex 4
         */
-        function clone():BitmapFilter;
+        function clone():flash.filters.BitmapFilter;
     }
 }

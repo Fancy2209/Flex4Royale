@@ -38,7 +38,7 @@ import mx.core.IUIComponent;
  *  @playerversion AIR 1.1
  *  @productversion Flex 3
  */
-public class DragEvent extends MouseEvent
+public class DragEvent extends flash.events.MouseEvent
 {
     include "../core/Version.as";
 

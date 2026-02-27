@@ -125,7 +125,7 @@ public class Transform extends flash.geom.Transform
     /**
      *  @private
      */     
-    override public function get concatenatedMatrix():Matrix
+    override public function get concatenatedMatrix():flash.geom.Matrix
     {
         if (target && "$transform" in target) // UIComponent/UIMovieClip
             return target["$transform"]["concatenatedMatrix"];
@@ -138,7 +138,7 @@ public class Transform extends flash.geom.Transform
     /**
      *  @private
      */ 
-    override public function set matrix(value:Matrix):void
+    override public function set matrix(value:flash.geom.Matrix):void
     {
         if (target is ILayoutElement && value != null)
             ILayoutElement(target).setLayoutMatrix(value, true);
@@ -152,7 +152,7 @@ public class Transform extends flash.geom.Transform
     /**
      *  @private
      */     
-    override public function get matrix():Matrix
+    override public function get matrix():flash.geom.Matrix
     {
         if (target is ILayoutElement)
             return ILayoutElement(target).getLayoutMatrix();

@@ -85,7 +85,7 @@ package mx.geom
      * these are only allocated and computed on demand -- many component instances will never use a 3D
      * matrix, for example. 
      */
-    private var _matrix:Matrix;
+    private var _matrix:flash.geom.Matrix;
     private var _matrix3D:Matrix3D;
     
     
@@ -638,7 +638,7 @@ package mx.geom
      *  @playerversion AIR 1.1
      *  @productversion Flex 3
      */
-    public function get matrix():Matrix
+    public function get matrix():flash.geom.Matrix
     {
         
         if (_flags & MATRIX_VALID)
@@ -647,9 +647,9 @@ package mx.geom
         if ((_flags & PROPERTIES_VALID) == false)
             validatePropertiesFromMatrix();
             
-        var m:Matrix = _matrix;
+        var m:flash.geom.Matrix = _matrix;
         if (m == null)
-            m = _matrix = new Matrix();
+            m = _matrix = new flash.geom.Matrix();
         else
             m.identity();
     
@@ -664,7 +664,7 @@ package mx.geom
     /**
      * @private
      */ 
-    public function set matrix(v:Matrix):void
+    public function set matrix(v:flash.geom.Matrix):void
     {
         if (_matrix== null)
         {

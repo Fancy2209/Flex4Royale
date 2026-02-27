@@ -37,7 +37,7 @@ import flash.net.URLRequest;
  *  @playerversion AIR 1.1
  *  @productversion Flex 3
  */
-public class RSLEvent extends ProgressEvent
+public class RSLEvent extends flash.events.ProgressEvent
 {
     include "../core/Version.as";
 

@@ -33,7 +33,7 @@ import mx.modules.IModuleInfo;
  *  @playerversion AIR 1.1
  *  @productversion Flex 3
  */
-public class ModuleEvent extends ProgressEvent
+public class ModuleEvent extends flash.events.ProgressEvent
 {
     include "../core/Version.as";
 

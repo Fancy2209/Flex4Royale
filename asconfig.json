@@ -4,26 +4,33 @@
 		"source-path": [
 			"src",
 			"projects/framework/src",
+			"projects/framework/bundles/en_US",
 			"projects/mx/src",
+			"projects/mx/bundles/en_US",
 			"projects/spark/src",
+			"projects/spark/bundles/en_US",
 			"projects/textLayout/src"
 		],
 		"library-path": [
 			"libs"
 		],
-		"external-library-path": [
-			"config/libs/player/32.0/playerglobal.swc"
-		],
 		"output": "bin/project.swf",
-		"targets": ["SWF"],
+		"targets": [
+			"SWF"
+		],
 		"define": [
-			{"name": "CONFIG::debug", "value": "true"},
-			{"name": "CONFIG::release", "value": "false"}
+			{ "name": "CONFIG::debug",   "value": "true"  },
+			{ "name": "CONFIG::release", "value": "false" }
+		],
+		"namespace": [
+			{ "uri": "library://ns.adobe.com/flex/spark", "manifest": "config/spark-manifest.xml" },
+			{ "uri": "library://ns.adobe.com/flex/mx",    "manifest": "config/mx-manifest.xml"    }
 		]
 	},
 	"mainClass": "project",
 	"additionalOptions": [
 		"-load-config=config/flex-config.xml", 
-		"-load-config+=projects/framework/framework-config.xml"
+		"-load-config+=projects/framework/framework-config.xml",
+		"-swf-version=43"
 	]
 }

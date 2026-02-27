@@ -1,0 +1,29 @@
+{
+	"config": "flex",
+	"compilerOptions": {
+		"source-path": [
+			"src",
+			"projects/framework/src",
+			"projects/mx/src",
+			"projects/spark/src",
+			"projects/textLayout/src"
+		],
+		"library-path": [
+			"libs"
+		],
+		"external-library-path": [
+			"config/libs/player/32.0/playerglobal.swc"
+		],
+		"output": "bin/project.swf",
+		"targets": ["SWF"],
+		"define": [
+			{"name": "CONFIG::debug", "value": "true"},
+			{"name": "CONFIG::release", "value": "false"}
+		]
+	},
+	"mainClass": "project",
+	"additionalOptions": [
+		"-load-config=config/flex-config.xml", 
+		"-load-config+=projects/framework/framework-config.xml"
+	]
+}

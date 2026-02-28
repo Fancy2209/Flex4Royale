@@ -357,7 +357,7 @@ public class Binding
         }
         catch(error:Error)
         {
-            if ((error.hasOwnProperty("errorID")) ? allowedErrors[error["errorID"]] : 1 == null)
+            if ((error.hasOwnProperty("errorID")) && allowedErrors[error["errorID"]] == null)
                 throw error;
         }
         finally

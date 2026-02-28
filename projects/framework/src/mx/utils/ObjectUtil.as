@@ -124,7 +124,7 @@ public class ObjectUtil
      */ 
     public static function copy(value:Object):Object
     {
-        var buffer:flash.utils.ByteArray = new flash.utils.ByteArray();
+        var buffer:ByteArray = new ByteArray();
         buffer.writeObject(value);
         buffer.position = 0;
         var result:Object = buffer.readObject();
@@ -1503,7 +1503,7 @@ public class ObjectUtil
     /**
      * @private
      */
-    private static function byteArrayCompare(a:flash.utils.ByteArray, b:flash.utils.ByteArray):int
+    private static function byteArrayCompare(a:ByteArray, b:ByteArray):int
     {
         var result:int = 0;
         

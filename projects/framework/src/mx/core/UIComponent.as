@@ -10777,30 +10777,30 @@ public class UIComponent extends FlexSprite
         // swap the keys to get the correct action.
         switch (keyCode)
         {
-            case flash.ui.Keyboard.DOWN:
+            case Keyboard.DOWN:
             {
                 // typically, if ltr, the same as RIGHT
                 if (mapUpDown && layoutDirection == LayoutDirection.RTL)
-                    keyCode = flash.ui.Keyboard.LEFT;
+                    keyCode = Keyboard.LEFT;
                 break;
             }
-            case flash.ui.Keyboard.RIGHT:
+            case Keyboard.RIGHT:
             {
                 if (layoutDirection == LayoutDirection.RTL)
-                    keyCode = flash.ui.Keyboard.LEFT;
+                    keyCode = Keyboard.LEFT;
                 break;
             }
-            case flash.ui.Keyboard.UP:
+            case Keyboard.UP:
             {
                 // typically, if ltr, the same as LEFT
                 if (mapUpDown && layoutDirection == LayoutDirection.RTL)
-                    keyCode = flash.ui.Keyboard.RIGHT;                
+                    keyCode = Keyboard.RIGHT;                
                 break;
             }
-            case flash.ui.Keyboard.LEFT:
+            case Keyboard.LEFT:
             {
                 if (layoutDirection == LayoutDirection.RTL)
-                    keyCode = flash.ui.Keyboard.RIGHT;                
+                    keyCode = Keyboard.RIGHT;                
                 break;
             }
         }

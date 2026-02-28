@@ -67,7 +67,7 @@ public class UIDUtil
 		55, 56, 57, 65, 66, 67, 68, 69, 70];
 
     private static const DASH:int = 45;       // dash ascii
-    private static const UIDBuffer:flash.utils.ByteArray = new flash.utils.ByteArray();       // static ByteArray used for UID generation to save memory allocation cost
+    private static const UIDBuffer:ByteArray = new ByteArray();       // static ByteArray used for UID generation to save memory allocation cost
 
     //--------------------------------------------------------------------------
     //
@@ -162,7 +162,7 @@ public class UIDUtil
      *  @playerversion AIR 1.1
      *  @productversion Flex 3
      */
-    public static function fromByteArray(ba:flash.utils.ByteArray):String
+    public static function fromByteArray(ba:ByteArray):String
     {
         if (ba != null && ba.length >= 16 && ba.bytesAvailable >= 16)
         {
@@ -242,11 +242,11 @@ public class UIDUtil
      *  @playerversion AIR 1.1
      *  @productversion Flex 3
      */
-    public static function toByteArray(uid:String):flash.utils.ByteArray
+    public static function toByteArray(uid:String):ByteArray
     {
         if (isUID(uid))
         {
-            var result:flash.utils.ByteArray = new flash.utils.ByteArray();
+            var result:ByteArray = new ByteArray();
 
             for (var i:uint = 0; i < uid.length; i++)
             {

@@ -28,7 +28,7 @@
 Accordion
 {
 	backgroundColor: #FFFFFF;
-	borderSkin: ClassReference("mx.skins.halo.BorderSkin");
+	borderSkin: ClassReference("mx.skins.spark.BorderSkin");
 	borderStyle: "solid";
 	/* headerHeight: 22; */
 	paddingBottom: -1;
@@ -68,7 +68,7 @@ AccordionHeader
 	selectedOverSkin: ClassReference(null);
 /*	selectedUpIcon: null; */
 	selectedUpSkin: ClassReference(null);
-	skin: ClassReference("mx.skins.halo.AccordionHeaderSkin");
+	skin: ClassReference("mx.skins.spark.AccordionHeaderSkin");
 	textAlign: "start";
 /*	upIcon: null; */
 	upSkin: ClassReference(null);
@@ -169,8 +169,8 @@ Button
 	textAlign: "center";
 /*	upIcon: null; 
 	upSkin: null */
-	skin: ClassReference("mx.skins.halo.ButtonSkin");
-	emphasizedSkin: ClassReference("mx.skins.halo.DefaultButtonSkin");
+	skin: ClassReference("mx.skins.spark.ButtonSkin");
+	emphasizedSkin: ClassReference("mx.skins.spark.DefaultButtonSkin");
 	verticalGap: 2;
 }
 
@@ -200,13 +200,13 @@ ButtonBar
 ButtonBarButton.buttonBarFirstButtonStyle
 {
     focusRoundedCorners: "tl bl";
-	skin: ClassReference("mx.skins.halo.ButtonBarFirstButtonSkin");
+	skin: ClassReference("mx.skins.spark.ButtonBarFirstButtonSkin");
 }
 
 ButtonBarButton.buttonBarLastButtonStyle
 {
     focusRoundedCorners: "tr br";
-	skin: ClassReference("mx.skins.halo.ButtonBarLastButtonSkin");
+	skin: ClassReference("mx.skins.spark.ButtonBarLastButtonSkin");
 }
 
 ButtonBarButton
@@ -226,7 +226,7 @@ ButtonBarButton
 	selectedOverSkin: ClassReference(null);
 /*	selectedUpIcon: null; */
 	selectedUpSkin: ClassReference(null); 
-	skin: ClassReference("mx.skins.halo.ButtonBarMiddleButtonSkin"); 
+	skin: ClassReference("mx.skins.spark.ButtonBarMiddleButtonSkin"); 
 /*	upIcon: null; */
 	upSkin: ClassReference(null);
 }
@@ -269,7 +269,7 @@ CheckBox
 	downSkin: ClassReference(null); 
 	fontWeight: "normal";
 	horizontalGap: 3;
-	icon: ClassReference("mx.skins.halo.CheckBoxSkin");
+	icon: ClassReference("mx.skins.spark.CheckBoxSkin");
 	labelVerticalOffset: 1;
 	overIcon: ClassReference(null);
 	overSkin: ClassReference(null);
@@ -303,7 +303,7 @@ ColorPicker
 	downSkin: null; */
 	fontSize: 11;
 /*	overSkin: null; */
-	skin: ClassReference("mx.skins.halo.ColorPickerSkin");
+	skin: ClassReference("mx.skins.spark.ColorPickerSkin");
 	swatchBorderSize: 0;
 /*	upSkin: null; */
 	verticalGap: 0;
@@ -317,7 +317,7 @@ ColorPicker
 
 ComboBase
 {
-    borderSkin: ClassReference("mx.skins.halo.BorderSkin");
+    borderSkin: ClassReference("mx.skins.spark.BorderSkin");
 }
 
 /*
@@ -336,7 +336,7 @@ ComboBox
 /*	editableDisabledSkin: null
 	editableDownSkin: null
 	editableOverSkin: null */
-	editableSkin: ClassReference("mx.skins.halo.EditableComboBoxSkin");
+	editableSkin: ClassReference("mx.skins.spark.EditableComboBoxSkin");
 /*	editableUpSkin: null 
 	fontWeight: "bold"; */
 	leading: 0;
@@ -345,7 +345,7 @@ ComboBox
 	paddingLeft: 5;
 	paddingRight: 5;
 	paddingTop: -1;
-	skin: ClassReference("mx.skins.halo.ComboBoxSkin");
+	skin: ClassReference("mx.skins.spark.ComboBoxSkin");
 /*	upSkin: null */
 }
 
@@ -371,7 +371,7 @@ List.comboDropdown
 
 Container
 {
-    borderSkin: ClassReference("mx.skins.halo.ContainerBorderSkin");
+    borderSkin: ClassReference("mx.skins.spark.ContainerBorderSkin");
 	borderStyle: "none";
     cornerRadius: 0;
 }
@@ -405,9 +405,9 @@ DataGrid
 	columnDropIndicatorSkin: ClassReference("mx.skins.halo.DataGridColumnDropIndicator");
 	columnResizeSkin: ClassReference("mx.skins.halo.DataGridColumnResizeSkin");
 	headerDragProxyStyleName: "headerDragProxyStyle";
-	headerBackgroundSkin: ClassReference("mx.skins.halo.DataGridHeaderBackgroundSkin");
-	headerSeparatorSkin: ClassReference("mx.skins.halo.DataGridHeaderSeparatorSkin");
-	sortArrowSkin: ClassReference("mx.skins.halo.DataGridSortArrow");
+	headerBackgroundSkin: ClassReference("mx.skins.spark.DataGridHeaderBackgroundSkin");
+	headerSeparatorSkin: ClassReference("mx.skins.spark.DataGridHeaderSeparatorSkin");
+	sortArrowSkin: ClassReference("mx.skins.spark.DataGridSortArrow");
 	stretchCursor: Embed(source="Assets.swf",symbol="cursorStretch");
 	verticalGridLineColor: #696969;
 }
@@ -430,32 +430,32 @@ DataGridItemRenderer
 */
 DateChooser
 {
-    borderSkin: ClassReference("mx.skins.halo.BorderSkin");
+    borderSkin: ClassReference("mx.skins.spark.BorderSkin");
     cornerRadius: 0;
 /*	headerStyleName: "headerDateText";
 	nextMonthDisabledSkin: null
 	nextMonthDownSkin: null
 	nextMonthOverSkin: null */
-	nextMonthSkin: ClassReference("mx.skins.halo.DateChooserNextMonthSkin");
+	nextMonthSkin: ClassReference("mx.skins.spark.DateChooserNextMonthSkin");
 /*	nextMonthUpSkin: null
 	nextYearDisabledSkin: null
 	nextYearDownSkin: null
 	nextYearOverSkin: null */
-	nextYearSkin: ClassReference("mx.skins.halo.DateChooserNextYearSkin");
+	nextYearSkin: ClassReference("mx.skins.spark.DateChooserNextYearSkin");
 /*	nextYearUpSkin: null
 	prevMonthDisabledSkin: null
 	prevMonthDownSkin: null
 	prevMonthOverSkin: null */
-	prevMonthSkin: ClassReference("mx.skins.halo.DateChooserPrevMonthSkin");
+	prevMonthSkin: ClassReference("mx.skins.spark.DateChooserPrevMonthSkin");
 /*	prevMonthUpSkin: null
 	prevYearDisabledSkin: null
 	prevYearDownSkin: null
 	prevYearOverSkin: null */
-	prevYearSkin: ClassReference("mx.skins.halo.DateChooserPrevYearSkin");
+	prevYearSkin: ClassReference("mx.skins.spark.DateChooserPrevYearSkin");
 /*	prevYearUpSkin: null */
-	rollOverIndicatorSkin: ClassReference("mx.skins.halo.DateChooserRollOverIndicatorSkin");
-	selectionIndicatorSkin: ClassReference("mx.skins.halo.DateChooserSelectionIndicatorSkin");
-	todayIndicatorSkin: ClassReference("mx.skins.halo.DateChooserTodayIndicatorSkin");
+	rollOverIndicatorSkin: ClassReference("mx.skins.spark.DateChooserRollOverIndicatorSkin");
+	selectionIndicatorSkin: ClassReference("mx.skins.spark.DateChooserSelectionIndicatorSkin");
+	todayIndicatorSkin: ClassReference("mx.skins.spark.DateChooserTodayIndicatorSkin");
     todayColor: #C6D0DB;	
     todayStyleName: "todayStyle";
 	weekDayStyleName: "weekDayStyle";
@@ -730,7 +730,7 @@ LinkButton
 	selectedOverSkin: ClassReference(null);
 /*	selectedUpIcon: null; */
 	selectedUpSkin: ClassReference(null); 
-	skin: ClassReference("mx.skins.halo.LinkButtonSkin");
+	skin: ClassReference("mx.skins.spark.LinkButtonSkin");
 /*	upIcon: null; */
 	upSkin: ClassReference(null); 
 }
@@ -795,10 +795,10 @@ ListBase
 Menu
 {
 	borderStyle: "menuBorder";
-	branchDisabledIcon : ClassReference("mx.skins.halo.MenuArrowDisabled");
-	branchIcon : ClassReference("mx.skins.halo.MenuArrow");
-	checkDisabledIcon : ClassReference("mx.skins.halo.MenuCheckDisabled");
-	checkIcon : ClassReference("mx.skins.halo.MenuCheck");
+	branchDisabledIcon : ClassReference("mx.skins.spark.MenuArrowDisabled");
+	branchIcon : ClassReference("mx.skins.spark.MenuArrow");
+	checkDisabledIcon : ClassReference("mx.skins.spark.MenuCheckDisabled");
+	checkIcon : ClassReference("mx.skins.spark.MenuCheck");
 	dropIndicatorSkin: ClassReference("mx.skins.halo.ListDropIndicator");
 /*	dropShadowVisible: true;  in spark.css */
 	horizontalGap: 6;
@@ -808,9 +808,9 @@ Menu
 	paddingLeft: 1;
 	paddingRight: 0;
 	paddingTop: 1;
-	radioDisabledIcon : ClassReference("mx.skins.halo.MenuRadioDisabled");
-	radioIcon : ClassReference("mx.skins.halo.MenuRadio");
-	separatorSkin: ClassReference("mx.skins.halo.MenuSeparatorSkin");
+	radioDisabledIcon : ClassReference("mx.skins.spark.MenuRadioDisabled");
+	radioIcon : ClassReference("mx.skins.spark.MenuRadio");
+	separatorSkin: ClassReference("mx.skins.spark.MenuSeparatorSkin");
 	verticalAlign: "middle";
 }
 
@@ -822,8 +822,8 @@ Menu
 
 MenuBar
 {
-	backgroundSkin: ClassReference("mx.skins.halo.ButtonSkin");
-	itemSkin: ClassReference("mx.skins.halo.MenuItemSkin");
+	backgroundSkin: ClassReference("mx.skins.spark.ButtonSkin");
+	itemSkin: ClassReference("mx.skins.spark.MenuItemSkin");
 /*	itemUpSkin: null
 	itemOverSkin: null
 	itemDownSkin: null */
@@ -836,7 +836,7 @@ MenuBar
 */
 NavBar
 {
-    borderSkin: ClassReference("mx.skins.halo.BorderSkin");
+    borderSkin: ClassReference("mx.skins.spark.BorderSkin");
 }
 
 /*
@@ -851,13 +851,13 @@ NumericStepper
 /*	downArrowDisabledSkin: null
 	downArrowDownSkin: null
 	downArrowOverSkin: null */
-	downArrowSkin: ClassReference("mx.skins.halo.StepperDecrButtonSkin");
+	downArrowSkin: ClassReference("mx.skins.spark.StepperDecrButtonSkin");
 /*	downArrowUpSkin: null */
 	focusRoundedCorners: "tr br"; /* Only round the right corners of the focus rect */
 /*	upArrowDisabledSkin: null
 	upArrowDownSkin: null
 	upArrowOverSkin: null */
-	upArrowSkin: ClassReference("mx.skins.halo.StepperIncrButtonSkin");
+	upArrowSkin: ClassReference("mx.skins.spark.StepperIncrButtonSkin");
 /*	upArrowUpSkin: null */
 }
 
@@ -883,7 +883,7 @@ Panel
 	backgroundColor: #FFFFFF;
     borderAlpha: 0.5;
     borderColor: 0;
-	borderSkin: ClassReference("mx.skins.halo.PanelBorderSkin");
+	borderSkin: ClassReference("mx.skins.spark.PanelBorderSkin");
 	borderStyle: "default";
 	/* cornerRadius: 4; */
     cornerRadius: 0;
@@ -917,7 +917,7 @@ PopUpButton
 	popUpIcon: ClassReference("mx.skins.halo.PopUpIcon"); 
 	popUpGap: 0;
 /*	popUpOverSkin: null; */
-	skin: ClassReference("mx.skins.halo.PopUpButtonSkin");
+	skin: ClassReference("mx.skins.spark.PopUpButtonSkin");
 /*	upSkin: null; */
 }
 
@@ -960,7 +960,7 @@ PrintDataGrid
 	headerStyleName: "dataGridStyles";
 	horizontalGridLineColor: 0;
 	horizontalGridLines: true;
-	sortArrowSkin: ClassReference("mx.skins.halo.DataGridSortArrow");
+	sortArrowSkin: ClassReference("mx.skins.spark.DataGridSortArrow");
 	stretchCursor: Embed(source="Assets.swf",symbol="cursorStretch");
 	verticalGridLineColor: #000000;
 }
@@ -973,13 +973,13 @@ PrintDataGrid
 
 ProgressBar
 {
-	barSkin: ClassReference("mx.skins.halo.ProgressBarSkin");
+	barSkin: ClassReference("mx.skins.spark.ProgressBarSkin");
 	fontWeight: "bold";
 	indeterminateMoveInterval: 14;
-	indeterminateSkin: ClassReference("mx.skins.halo.ProgressIndeterminateSkin");
+	indeterminateSkin: ClassReference("mx.skins.spark.ProgressIndeterminateSkin");
     leading: 0;
-    maskSkin: ClassReference("mx.skins.halo.ProgressMaskSkin");
-	trackSkin: ClassReference("mx.skins.halo.ProgressBarTrackSkin");
+    maskSkin: ClassReference("mx.skins.spark.ProgressMaskSkin");
+	trackSkin: ClassReference("mx.skins.spark.ProgressBarTrackSkin");
 }
 
 /*
@@ -996,7 +996,7 @@ RadioButton
 	downSkin: ClassReference(null);
 	fontWeight: "normal";
 	horizontalGap: 3;	
-	icon: ClassReference("mx.skins.halo.RadioButtonSkin");
+	icon: ClassReference("mx.skins.spark.RadioButtonSkin");
 	labelVerticalOffset: 1;
 	overIcon: ClassReference(null);
 	overSkin: ClassReference(null);
@@ -1051,7 +1051,7 @@ ScrollBar
 /*	downArrowDisabledSkin: null
 	downArrowDownSkin: null
 	downArrowOverSkin: null */
-	downArrowSkin: ClassReference("mx.skins.halo.ScrollBarDownButtonSkin");
+	downArrowSkin: ClassReference("mx.skins.spark.ScrollBarDownButtonSkin");
 /*	downArrowUpSkin: null
 	fillColors: #FFFFFF, #E7E7E7; // bailed these as ScrollBar is now a translucent component backed by backgroundColor-derived solid shapes */
     paddingBottom: 0;
@@ -1061,13 +1061,13 @@ ScrollBar
     thumbOffset: 0;
 /*	thumbDownSkin: null
 	thumbOverSkin: null */
-	thumbSkin: ClassReference("mx.skins.halo.ScrollBarThumbSkin");
+	thumbSkin: ClassReference("mx.skins.spark.ScrollBarThumbSkin");
 /*	thumbUpSkin: null */
-	trackSkin: ClassReference("mx.skins.halo.ScrollBarTrackSkin");
+	trackSkin: ClassReference("mx.skins.spark.ScrollBarTrackSkin");
 /*	upArrowDisabledSkin: null
 	upArrowDownSkin: null
 	upArrowOverSkin: null */
-	upArrowSkin: ClassReference("mx.skins.halo.ScrollBarUpButtonSkin");
+	upArrowSkin: ClassReference("mx.skins.spark.ScrollBarUpButtonSkin");
 /*	upArrowUpSkin: null */
 }
 
@@ -1079,7 +1079,7 @@ ScrollBar
 
 ScrollControlBase 
 {
-	borderSkin: ClassReference("mx.skins.halo.BorderSkin");
+	borderSkin: ClassReference("mx.skins.spark.BorderSkin");
     focusRoundedCorners : " ";
 }
 
@@ -1101,13 +1101,13 @@ Slider
 	thumbDownSkin: null */
 	thumbOffset: 0;
 /*	thumbOverSkin: null */
-	thumbSkin: ClassReference("mx.skins.halo.SliderThumbSkin");
+	thumbSkin: ClassReference("mx.skins.spark.SliderThumbSkin");
 /*	thumbUpSkin: null */
 	tickColor: #6F7777;
 	tickOffset: -6;
 	tickThickness: 1;
-	trackHighlightSkin: ClassReference("mx.skins.halo.SliderTrackHighlightSkin");
-	trackSkin: ClassReference("mx.skins.halo.SliderTrackSkin");
+	trackHighlightSkin: ClassReference("mx.skins.spark.SliderTrackHighlightSkin");
+	trackSkin: ClassReference("mx.skins.spark.SliderTrackSkin");
 }
 
 /*
@@ -1200,7 +1200,7 @@ Tab
 	selectedOverSkin: ClassReference(null);
 /*	selectedUpIcon: null; */
 	selectedUpSkin: ClassReference(null); 
-	skin: ClassReference("mx.skins.halo.TabSkin");
+	skin: ClassReference("mx.skins.spark.TabSkin");
 /*	upIcon: ClassReference(null); */
 	upSkin: ClassReference(null); 
 }
@@ -1284,7 +1284,7 @@ VScrollBar.textAreaHScrollBarStyle
 
 TextInput
 {
-	borderSkin: ClassReference("mx.skins.halo.TextInputBorderSkin");
+	borderSkin: ClassReference("mx.skins.spark.TextInputBorderSkin");
 	paddingTop: 2;
 	paddingLeft: 2;
 	paddingRight: 2;
@@ -1416,7 +1416,7 @@ VDividedBox
 
 VideoDisplay
 {
-    borderSkin: ClassReference("mx.skins.halo.BorderSkin");
+    borderSkin: ClassReference("mx.skins.spark.BorderSkin");
     borderStyle: "none";
 /*    contentBackgroundColor: #000000;  in spark.css */
     layoutDirection: "ltr";

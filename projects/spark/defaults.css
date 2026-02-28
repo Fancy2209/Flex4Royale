@@ -282,12 +282,14 @@ VideoDisplay
 */
 
 
-/*VideoPlayer
-{ */
 /*  dropShadowVisible: true; in spark.css */
-/*  layoutDirection: "ltr";
+/*
+VideoPlayer
+{
+    layoutDirection: "ltr";
     skinClass: ClassReference("spark.skins.spark.VideoPlayerSkin");
-}*/
+}
+*/
 
 VolumeBar
 {

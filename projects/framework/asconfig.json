@@ -7,8 +7,13 @@
 			"src",
 			"bundles/en_US"
 		],
+		"library-path": [
+			"${royalelib}/libs/Core.swc"
+		],
+		"swf-external-library-path": [
+			"${royalelib}/libs/player/32.0/playerglobal.swc"
+		],
 		"external-library-path": [
-			"${royalelib}/libs/player/32.0/playerglobal.swc",
 			"../textLayout/bin/textLayout_core.swc"
 		],
 		"include-classes": [
@@ -33,6 +38,19 @@
 			"-load-config+=framework-config.xml",
 			"--namespace=http://www.adobe.com/2006/mxml,manifest.xml",
 			"--namespace+=library://ns.adobe.com/flex/mx,manifest.xml",
-			"-resource-bundle-list=bundles.properties"
+			"-resource-bundle-list=bundles.properties",
+			"-include-resource-bundles+=SharedResources",
+			"-include-resource-bundles+=collections",
+			"-include-resource-bundles+=controls",
+			"-include-resource-bundles+=core",
+			"-include-resource-bundles+=effects",
+			"-include-resource-bundles+=formatters",
+			"-include-resource-bundles+=logging",
+			"-include-resource-bundles+=modules",
+			"-include-resource-bundles+=skins",
+			"-include-resource-bundles+=states",
+			"-include-resource-bundles+=styles",
+			"-include-resource-bundles+=utils",
+			"-include-resource-bundles+=validators"
 		]
 }

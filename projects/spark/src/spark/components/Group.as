@@ -1440,6 +1440,7 @@ public class Group extends GroupBase implements IVisualElementContainer,
         // check for RangeError:
         checkForRangeError(index, true);
         
+        trace(element);
         var host:DisplayObject = element.parent; 
         
         // This handles the case where we call addElement on something

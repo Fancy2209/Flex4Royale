@@ -422,6 +422,7 @@ public class PopUpManagerImpl extends EventDispatcher implements IPopUpManager
 				window.addEventListener(FlexEvent.CREATION_COMPLETE, modalPopUpCreationCompleteHandler, false, 0, true);
 
 			// create a modal window shield which blocks input and sets up mouseDownOutside logic
+            trace(children);
             createModalWindow(parent, o, children, visibleFlag, smp, smp.getSandboxRoot());
         }
         else

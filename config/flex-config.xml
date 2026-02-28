@@ -83,7 +83,7 @@
 
       <!-- List of SWC files or directories that contain SWC files. -->
       <library-path>
-         <!-- path-element>${royalelib}libs</path-element -->
+         <!-- path-element>${royalelib}/libs</path-element -->
          <!-- path-element>libs/mx</path-element -->
          <!-- path-element>js/libs</path-element -->
          <path-element>locale/{locale}</path-element>
@@ -96,7 +96,7 @@
 
       <allow-subclass-overrides>true</allow-subclass-overrides>
       <mxml>
-          <children-as-data>true</children-as-data>
+          <children-as-data>false</children-as-data>
           <imports>
               <implicit-import>flash.events.Event</implicit-import>
               <implicit-import>flash.events.EventDispatcher</implicit-import>
@@ -168,6 +168,7 @@
       <!--          3. ChangeEvent                                                                       -->
       <!--          4. NonCommittingChangeEvent                                                          -->
       <!--          5. Transient                                                                         -->
+      <!--          6. Mixin                                                                             -->
       <!--
       <keep-as3-metadata>
           <name>Bindable</name>
@@ -175,6 +176,7 @@
           <name>ChangeEvent</name>
           <name>NonCommittingChangeEvent</name>
           <name>Transient</name>
+          <name>Mixin</name>
       </keep-as3-metadata>
       -->
 

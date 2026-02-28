@@ -4,6 +4,7 @@
 		"accessible": true,
 		"source-path": [
 			"src",
+			"../sparkskins/src",
 			"../framework/bundles/en_US",
 			"bundles/en_US"
 		],
@@ -14,7 +15,7 @@
 			"../mx/bin/mx.swc"
 		],
 		"include-classes": [
-			"SparkClasses"
+			"SparkClasses", "SparkSkinsClasses"
 		],
 		"namespace": [
 			{
@@ -30,6 +31,11 @@
 	"type": "lib",
 	"additionalOptions": [
 		"-load-config=../../config/flex-config.xml",
+		"-include-resource-bundles+=layout",
+		"-include-resource-bundles+=collections",
+		"-include-resource-bundles+=components",
+		"-include-resource-bundles+=sparkEffects",
+		"-include-resource-bundles+=osmf",
 	 	"-keep-as3-metadata=SkinPart",
 		"-include-file=defaults.css,defaults.css",
 		"-resource-bundle-list=bundles.properties",

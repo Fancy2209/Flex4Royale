@@ -34,7 +34,7 @@ mx|VideoDisplay
 	contentBackgroundColor: #000000;
 }
 
-s|ComboBox, s|DropDownList, s|VideoPlayer
+s|ComboBox, s|DropDownList/*, s|VideoPlayer*/
 {
     dropShadowVisible: true;
 }

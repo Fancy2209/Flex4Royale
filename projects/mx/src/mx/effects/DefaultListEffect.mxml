@@ -87,6 +87,8 @@
     
     <mx:Script>
         <![CDATA[
+        import mx.core.mx_internal;
+        use namespace mx_internal;
 
         //----------------------------------------------------------------------
         //

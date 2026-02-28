@@ -274,17 +274,20 @@ ToggleButton
 	skinClass: ClassReference("spark.skins.spark.ToggleButtonSkin");
 }
 
+/*
 VideoDisplay
 {
     layoutDirection: "ltr";
 }
+*/
 
-VideoPlayer
-{
+
+/*VideoPlayer
+{ */
 /*  dropShadowVisible: true; in spark.css */
-    layoutDirection: "ltr";
+/*  layoutDirection: "ltr";
     skinClass: ClassReference("spark.skins.spark.VideoPlayerSkin");
-}
+}*/
 
 VolumeBar
 {

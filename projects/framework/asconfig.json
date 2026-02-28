@@ -1,0 +1,38 @@
+{
+	"config": "flex",
+	"compilerOptions": {
+		"output": "bin/framework.swc",
+		"accessible": true,
+		"source-path": [
+			"src",
+			"bundles/en_US"
+		],
+		"external-library-path": [
+			"${royalelib}/libs/player/32.0/playerglobal.swc",
+			"../textLayout/bin/textLayout_core.swc"
+		],
+		"include-classes": [
+			"FrameworkClasses"
+		],
+		"include-namespaces": [
+			"library://ns.adobe.com/flex/mx"
+		],
+		"targets": ["SWF"],
+		"keep-as3-metadata": ["Bindable","Managed","ChangeEvent","NonCommittingChangeEvent","Transient","Mixin"],
+		"include-file": [
+			{"file": "defaults.css", "path": "defaults.css"},
+			{"file": "defaults-3.0.0.css", "path": "defaults-3.0.0.css"},
+			//{"file": "assets/Assets.swf", "path": "Assets.swf"},
+			{"file": "assets/CalendarIcon.png", "path": "assets/CalendarIcon.png"}
+		]
+	},
+	"type": "lib",
+	"additionalOptions": 
+		[
+			"-load-config=../../config/flex-config.xml", 
+			"-load-config+=framework-config.xml",
+			"--namespace=http://www.adobe.com/2006/mxml,manifest.xml",
+			"--namespace+=library://ns.adobe.com/flex/mx,manifest.xml",
+			"-resource-bundle-list=bundles.properties"
+		]
+}

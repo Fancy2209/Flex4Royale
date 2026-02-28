@@ -1,0 +1,46 @@
+{
+	"compilerOptions": {
+		"output": "bin/mx.swc",
+		"accessible": true,
+		"source-path": [
+			"src",
+			"bundles/en_US",
+			"../framework/bundles/en_US"
+		],
+		"external-library-path": [
+			"${royalelib}/libs/player/32.0/playerglobal.swc",
+			"../textLayout/bin/textLayout_core.swc",
+			"../framework/bin/framework.swc"
+		],
+		"include-classes": [
+			"MxClasses"
+		],
+		"namespace": [
+			{
+				"uri": "library://ns.adobe.com/flex/mx",
+				"manifest": "manifest.xml"
+			},
+			{
+				"uri": "http://www.adobe.com/2006/mxml",
+				"manifest": "manifest.xml"
+			}
+		],
+		"include-namespaces": [
+			"library://ns.adobe.com/flex/mx"
+		],
+		"targets": ["SWF"],
+		"keep-as3-metadata": ["Bindable","Managed","ChangeEvent","NonCommittingChangeEvent","Transient","Mixin"],
+		"include-file": [
+			{"file": "defaults.css", "path": "defaults.css"},
+			{"file": "defaults-3.0.0.css", "path": "defaults-3.0.0.css"}
+		]
+	},
+	"type": "lib",
+	"additionalOptions": 
+	[
+		"--namespace=http://www.adobe.com/2006/mxml,manifest.xml",
+		"--namespace+=library://ns.adobe.com/flex/mx,manifest.xml",
+		"--resource-bundle-list=bundles.properties", 
+		"-include-resource-bundles+=containers"
+	]
+}

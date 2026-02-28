@@ -314,6 +314,32 @@ public class AddItems extends OverrideBase implements IMXMLObject
     {
         _items = value;
     }
+
+    //------------------------------------
+    //  itemsDescriptorIndex
+    //------------------------------------
+
+    /**
+     *  @private
+     */
+    private var _itemsDescriptorIndex:int;     
+        
+    /**
+     *  @private
+     */
+    public function get itemsDescriptorIndex():int
+    {
+        return _itemsDescriptorIndex;
+    }
+
+    /**
+     *  @private
+     */
+    public function set itemsDescriptorIndex(value:int):void
+    {
+        _itemsDescriptorIndex = value;
+    }
+
     
     //------------------------------------
     //  itemsDescriptor

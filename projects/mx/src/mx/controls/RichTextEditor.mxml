@@ -293,7 +293,8 @@
 
     <mx:Script>
     <![CDATA[
-    
+
+    import flash.text.TextFormat;
     import mx.controls.textClasses.TextRange;
     import mx.core.mx_internal;
     import mx.core.IUITextField;

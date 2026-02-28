@@ -1,0 +1,43 @@
+{
+	"compilerOptions": {
+		"output": "bin/spark.swc",
+		"accessible": true,
+		"source-path": [
+			"src",
+			"../framework/bundles/en_US",
+			"bundles/en_US"
+		],
+		"external-library-path": [
+			"${royalelib}/libs/player/32.0/playerglobal.swc",
+			"../textLayout/bin/textLayout_core.swc",
+			"../framework/bin/framework.swc",
+			"../mx/bin/mx.swc"
+		],
+		"include-classes": [
+			"SparkClasses"
+		],
+		"namespace": [
+			{
+				"uri": "library://ns.adobe.com/flex/spark",
+				"manifest": "manifest.xml"
+			}
+		],
+		"include-namespaces": [
+			"library://ns.adobe.com/flex/spark"
+		],
+		"targets": ["SWF"]
+	},
+	"type": "lib",
+	"additionalOptions": [
+		"-load-config=../../config/flex-config.xml",
+	 	"-keep-as3-metadata=SkinPart",
+		"-include-file=defaults.css,defaults.css",
+		"-resource-bundle-list=bundles.properties",
+		"-namespace=library://ns.adobe.com/flex/spark,manifest.xml",
+		"-include-file=assets/ErrorIndicator.png,assets/ErrorIndicator.png", 
+		"-include-file=assets/RequiredIndicator.png,assets/RequiredIndicator.png", 
+		"-include-namespaces=library://ns.adobe.com/flex/spark",
+		"-library-path=", 
+		"-locale="
+	]
+}

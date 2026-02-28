@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"output": "bin/textLayout_core.swc",
+		"target-player": "32.0",
+		"source-path": [
+			"src"
+		],
+		"include-classes": [
+			"flashx.textLayout.ConversionClasses",
+			"flashx.textLayout.CoreClasses",
+			"flashx.textLayout.EditClasses"
+		],
+		"namespace": [
+			{
+				"uri": "library://ns.adobe.com/flashx/textLayout",
+				"manifest": "manifest.xml"
+			}
+		],
+		"include-namespaces": [
+			"library://ns.adobe.com/flashx/textLayout"
+		],
+		"targets": ["SWF"]
+	},
+	"type": "lib",
+	"additionalOptions": "--namespace=library://ns.adobe.com/flashx/textLayout,manifest.xml -locale en_US -load-config=../../config/flex-config.xml -load-config+=config.xml"
+}

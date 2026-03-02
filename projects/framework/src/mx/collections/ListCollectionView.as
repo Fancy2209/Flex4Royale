@@ -22,9 +22,13 @@ package mx.collections
 
     import flash.events.Event;
     import flash.events.EventDispatcher;
-    import flash.utils.Proxy;
+    import org.apache.royale.reflection.getQualifiedClassName;
+    import org.apache.royale.utils.Proxy;
+    
+    COMPILE::SWF
+    {
     import flash.utils.flash_proxy;
-    import flash.utils.getQualifiedClassName;
+    }
 
     import mx.binding.utils.BindingUtils;
     import mx.binding.utils.ChangeWatcher;
@@ -928,11 +932,22 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
      *  @private
      *  Attempts to call getItemAt(), converting the property name into an int.
      */
+    COMPILE::SWF
     override flash_proxy function getProperty(name:*):*
     {
         if (name is QName)
             name = name.localName;
-
+        
+        return proxy_getProperty(name +'');
+    }
+    COMPILE::JS
+    override public function getProperty(name:String):*
+    {
+        return proxy_getProperty(name);
+    }
+    
+    private function proxy_getProperty(name:String):*
+    {
         try
         {
             var n:Number = parseInt(String(name));
@@ -958,10 +973,21 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
      *  @private
      *  Attempts to call setItemAt(), converting the property name into an int.
      */
+    COMPILE::SWF
     override flash_proxy function setProperty(name:*, value:*):void
-    {	
-		if (name is QName)
-			name = name.localName;
+    {
+        if (name is QName)
+            name = name.localName;
+        proxy_setProperty(name + '', value);
+    }
+    COMPILE::JS
+    override public function setProperty(name:String, value:*):void
+    {
+        proxy_setProperty(name /*as String*/, value);
+    }
+    
+    private function proxy_setProperty(name:String, value:*):void
+    {
 		
 		try
 		{
@@ -991,11 +1017,22 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
      *  
      *  @param name The property name that should be tested for existence.
      */
+    COMPILE::SWF
     override flash_proxy function hasProperty(name:*):Boolean
     {
         if (name is QName)
             name = name.localName;
-
+        
+        return proxy_hasProperty(name +'');
+    }
+    COMPILE::JS
+    override public function hasProperty(name:String):Boolean
+    {
+        return proxy_hasProperty(name );
+    }
+    
+    private function proxy_hasProperty(name:String):Boolean
+    {
         var index:int = -1;
         try
         {
@@ -1017,6 +1054,7 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
     /**
      *  @private
      */
+    COMPILE::SWF
     override flash_proxy function nextNameIndex(index:int):int
     {
         return index < length ? index + 1 : 0;
@@ -1025,6 +1063,7 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
     /**
      *  @private
      */
+    COMPILE::SWF
     override flash_proxy function nextName(index:int):String
     {
         return (index - 1).toString();
@@ -1033,6 +1072,7 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
     /**
      *  @private
      */
+    COMPILE::SWF
     override flash_proxy function nextValue(index:int):*
     {
         return getItemAt(index - 1);
@@ -1043,11 +1083,23 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
      *  Any methods that can't be found on this class shouldn't be called,
      *  so return null
      */
+    COMPILE::SWF
     override flash_proxy function callProperty(name:*, ... rest):*
     {
         return null;
     }
 
+    COMPILE::JS
+    override public function propertyNames():Array
+    {
+        var nextNameArray:Array = [];
+        for (var i:int = 0; i < length; i++)
+        {
+            nextNameArray.push(i.toString());    
+        }
+        return nextNameArray;
+    }
+    
     //--------------------------------------------------------------------------
     //
     // EventDispatcher methods
@@ -1062,7 +1114,7 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
      *  @playerversion AIR 1.1
      *  @productversion Flex 3
      */
-    public function addEventListener(eventType:String,
+    COMPILE::JS {override} public function addEventListener(eventType:String,
                                      listener:Function,
                                      useCapture:Boolean = false,
                                      priority:int = 0,
@@ -1080,7 +1132,7 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
      *  @playerversion AIR 1.1
      *  @productversion Flex 3
      */
-    public function removeEventListener(eventType:String,
+    COMPILE::JS {override} public function removeEventListener(eventType:String,
                                         listener:Function,
                                         useCapture:Boolean = false):void
     {
@@ -1095,7 +1147,7 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
      *  @playerversion AIR 1.1
      *  @productversion Flex 3
      */
-    public function dispatchEvent(event:Event):Boolean
+    COMPILE::JS {override} public function dispatchEvent(event:Event):Boolean
     {
         return eventDispatcher.dispatchEvent(event);
     }
@@ -1108,7 +1160,7 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
      *  @playerversion AIR 1.1
      *  @productversion Flex 3
      */
-    public function hasEventListener(eventType:String):Boolean
+    COMPILE::JS {override} public function hasEventListener(eventType:String):Boolean
     {
         return eventDispatcher.hasEventListener(eventType);
     }
@@ -1121,7 +1173,7 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
      *  @playerversion AIR 1.1
      *  @productversion Flex 3
      */
-    public function willTrigger(eventType:String):Boolean
+    COMPILE::JS {override} public function willTrigger(eventType:String):Boolean
     {
         return eventDispatcher.willTrigger(eventType);
     }
@@ -1544,6 +1596,14 @@ public class ListCollectionView extends Proxy implements ICollectionView, IList,
             var updateEvent:CollectionEvent = new CollectionEvent(CollectionEvent.COLLECTION_CHANGE);
             updateEvent.kind = CollectionEventKind.UPDATE;
             updateEvent.items = eventItems;
+            //for (i = 0; i < list.length; i++)
+            //{
+            //    if (list.getItemAt(i) == (eventItems[0] as PropertyChangeEvent).source)
+            //    {
+            //        updateEvent.location = i;
+            //        break;
+            //    }
+            //}
             dispatchEvent(updateEvent);
         }
     }
@@ -1976,6 +2036,20 @@ class ListCollectionViewCursor extends EventDispatcher implements IViewCursor
                 setCurrent(null, false);
             }
         }
+    }
+    
+    /**
+     *  Finalizes the cursor, to clean up resources.
+     *  Required because weak references are not available in JS.
+     *  
+     *  @langversion 3.0
+     *  @playerversion Flash 9
+     *  @playerversion AIR 1.1
+     *  @productversion Royale 0.9.8
+     */
+    public function finalizeThis():void
+    {
+        if (_view) _view.removeEventListener(CollectionEvent.COLLECTION_CHANGE, collectionEventHandler);
     }
 
     //--------------------------------------------------------------------------

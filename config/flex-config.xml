@@ -29,6 +29,15 @@
 
    <compiler>
 
+      <!-- build both SWF and JS. -->
+      <targets>
+          <target>SWF</target>
+          <target>JSRoyale</target>
+      </targets>
+
+      <define><name>COMPILE::SWF</name><value>AUTO</value></define>
+      <define><name>COMPILE::JS</name><value>AUTO</value></define>
+
       <!-- Turn on generation of accessible SWFs. -->
       <accessible>true</accessible>
 
@@ -97,7 +106,7 @@
       <allow-subclass-overrides>true</allow-subclass-overrides>
       <mxml>
           <children-as-data>false</children-as-data>
-          <imports>
+          <imports append="false">
               <implicit-import>flash.events.Event</implicit-import>
               <implicit-import>flash.events.EventDispatcher</implicit-import>
               <implicit-import>flash.events.IEventDispatcher</implicit-import>

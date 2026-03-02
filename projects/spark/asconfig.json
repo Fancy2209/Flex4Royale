@@ -8,6 +8,14 @@
 			"../framework/bundles/en_US",
 			"bundles/en_US"
 		],
+		"swf-external-library-path": [
+			"${royalelib}/libs/player/32.0/playerglobal.swc",
+			"${royalelib}/libs/Reflection.swc"
+		],
+		"js-external-library-path": [
+			"${royalelib}/libs/player/32.0/playerglobal.swc",
+			"${royalelib}/libs/Reflection.swc"
+		],
 		"external-library-path": [
 			"${royalelib}/libs/player/32.0/playerglobal.swc",
 			"../textLayout/bin/textLayout_core.swc",
@@ -26,7 +34,11 @@
 		"include-namespaces": [
 			"library://ns.adobe.com/flex/spark"
 		],
-		"targets": ["SWF"]
+		"targets": ["SWF", "JS"],
+		"define": [
+			{"name": "COMPILE::SWF", "value": "AUTO"},
+			{"name": "COMPILE::JS", "value": "AUTO"}
+		]
 	},
 	"type": "lib",
 	"additionalOptions": [
@@ -44,6 +56,8 @@
 		"-include-file=assets/RequiredIndicator.png,assets/RequiredIndicator.png", 
 		"-include-namespaces=library://ns.adobe.com/flex/spark",
 		"-library-path=", 
-		"-locale="
+		"-locale=",
+		"-js-getter-prefix=get_",
+		"-js-setter-prefix=set_"
 	]
 }

@@ -52,7 +52,8 @@ public class LoaderConfig
         {
             _url = LoaderUtil.normalizeURL(root.loaderInfo);
             _parameters = root.loaderInfo.parameters;
-            _swfVersion = root.loaderInfo.swfVersion;
+            COMPILE::SWF { _swfVersion = root.loaderInfo.swfVersion };
+            COMPILE::JS { _swfVersion = 43 };
         }
     }
     

@@ -7,14 +7,19 @@
 			"src",
 			"bundles/en_US"
 		],
-		"library-path": [
-			"${royalelib}/libs/Core.swc"
-		],
 		"swf-external-library-path": [
-			"${royalelib}/libs/player/32.0/playerglobal.swc"
+			"${royalelib}/libs/player/32.0/playerglobal.swc",
+			"${royalelib}/libs/Reflection.swc"
+		],
+		"js-external-library-path": [
+			"${royalelib}/libs/player/32.0/playerglobal.swc",
+			"${royalelib}/libs/Reflection.swc"
 		],
 		"external-library-path": [
-			"../textLayout/bin/textLayout_core.swc"
+			"../textLayout/bin/textLayout_core.swc",
+			"${royalelib}/libs/Core.swc",
+			"${royalelib}/libs/Reflection.swc",
+			"${royalelib}/libs/XML.swc"
 		],
 		"include-classes": [
 			"FrameworkClasses"
@@ -22,7 +27,11 @@
 		"include-namespaces": [
 			"library://ns.adobe.com/flex/mx"
 		],
-		"targets": ["SWF"],
+		"targets": ["SWF", "JS"],
+		"define": [
+			{"name": "COMPILE::SWF", "value": "AUTO"},
+			{"name": "COMPILE::JS", "value": "AUTO"}
+		],
 		"keep-as3-metadata": ["Bindable","Managed","ChangeEvent","NonCommittingChangeEvent","Transient","Mixin"],
 		"include-file": [
 			{"file": "defaults.css", "path": "defaults.css"},
@@ -51,6 +60,8 @@
 			"-include-resource-bundles+=states",
 			"-include-resource-bundles+=styles",
 			"-include-resource-bundles+=utils",
-			"-include-resource-bundles+=validators"
+			"-include-resource-bundles+=validators",
+		"-js-getter-prefix=get_",
+		"-js-setter-prefix=set_"
 		]
 }

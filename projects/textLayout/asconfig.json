@@ -5,6 +5,14 @@
 		"source-path": [
 			"src"
 		],
+		"swf-external-library-path": [
+			"${royalelib}/libs/player/32.0/playerglobal.swc",
+			"${royalelib}/libs/Reflection.swc"
+		],
+		"js-external-library-path": [
+			"${royalelib}/libs/player/32.0/playerglobal.swc",
+			"${royalelib}/libs/Reflection.swc"
+		],
 		"include-classes": [
 			"flashx.textLayout.ConversionClasses",
 			"flashx.textLayout.CoreClasses",
@@ -19,8 +27,11 @@
 		"include-namespaces": [
 			"library://ns.adobe.com/flashx/textLayout"
 		],
-		"targets": ["SWF"]
-	},
+		"targets": ["SWF", "JS"],
+		"define": [
+			{"name": "COMPILE::SWF", "value": "AUTO"},
+			{"name": "COMPILE::JS", "value": "AUTO"}
+		],	},
 	"type": "lib",
-	"additionalOptions": "--namespace=library://ns.adobe.com/flashx/textLayout,manifest.xml -locale en_US -load-config=../../config/flex-config.xml -load-config+=config.xml"
+	"additionalOptions": "--namespace=library://ns.adobe.com/flashx/textLayout,manifest.xml -locale en_US -load-config=../../config/flex-config.xml -load-config+=config.xml -js-getter-prefix=get_ -js-setter-prefix=set_"
 }

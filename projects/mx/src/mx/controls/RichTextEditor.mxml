@@ -295,6 +295,8 @@
     <![CDATA[
 
     import flash.text.TextFormat;
+    import flash.events.Event;
+
     import mx.controls.textClasses.TextRange;
     import mx.core.mx_internal;
     import mx.core.IUITextField;
@@ -862,7 +864,7 @@
             textArea.getTextField().setTextFormat(tf,beginIndex,endIndex);
         }
 
-        dispatchEvent(new Event("change"));
+        dispatchEvent(new flash.events.Event("change"));
         
         var caretIndex:int = textArea.getTextField().caretIndex;
         var lineIndex:int = textArea.getTextField().getLineIndexOfChar(caretIndex);
